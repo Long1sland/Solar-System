@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import Stars from "../src/images/background-stars.svg"
+
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -22,11 +22,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: url(${Stars}), var(--backgroundColor);
-    font-family: 'Spartan', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 25px;
+    background: url("assets/background-stars.svg"), var(--backgroundColor);
+    
 
     a{
         text-decoration: none;
@@ -37,6 +34,7 @@ body {
         font-family: 'Antonio', sans-serif;
         font-size: 80px;
         line-height: 103px;
+        color: var(--white)
     }
 
     h2{
@@ -55,7 +53,13 @@ body {
         color: var(--white)
     }
 
-
+    p {
+        font-family: 'Spartan', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 25px;
+        color: var(--white)
+    }
     }
 
 * {

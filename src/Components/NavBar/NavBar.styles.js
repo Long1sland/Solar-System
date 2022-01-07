@@ -48,7 +48,7 @@ p{
 export const Navlinks = styled.div`
 
 display: flex;
-height: 100%;
+
 
 
 a{
@@ -61,47 +61,48 @@ a{
     color: var(--darkGrey);
     
     margin-right: 33px;
-    height: 100%;
     border-top: 3px solid transparent;
-    padding: 26px 0;
+    padding: 30px 0;
     transition: all 0.3s ease-in-out;
 }
 
-a:hover{
-    border-top: 3px solid white;
+a:hover, .active{
     color: var(--white)
 }
 
-#mercury{
 
+
+#mercury.active , #mercury:hover{
+    border-top: 3px solid var(--mercuryColor);
 }
 
-#venus{
+#venus.active, #venus:hover{
 
+    border-top: 3px solid var(--venusColor)
 }
 
-#earth{
-
+#earth.active, #earth:hover{
+border-top: 3px solid var(--earthColor)
 }
 
-#mercury{
-
+#mars.active, #mars:hover{
+border-top: 3px solid var(--marsColor)
 }
 
-#jupiter{
-
+#jupiter.active, #jupiter:hover{
+border-top: 3px solid var(--jupiterColor)
 }
 
-#saturn{
-
+#saturn.active, #saturn:hover{
+border-top: 3px solid var(--saturnColor)
 }
 
-#uranus{
-
+#uranus.active, #uranus:hover{
+border-top: 3px solid var(--uranusColor)
 }
 
-#neptune{
-
+#neptune.active, #neptune:hover{
+border-top: 3px solid var(--neptuneColor)
 }
 
 .noMargin{
