@@ -48,6 +48,7 @@ export const PlanetData = styled.div`
 
     @media screen and (max-width: 860px) {
       width: 100%;
+      max-width: 500px;
     }
   }
 
