@@ -7,22 +7,25 @@ import Home from "./Home";
 import { GlobalStyle } from "./GlobalStyles";
 
 //Routing
-import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-
-console.log("the entire app re rendered")
+console.log("the entire app re rendered");
 
 function App() {
   return (
     <>
-    <BrowserRouter>
-    <NavBar/>
-    <Routes>
-      <Route exact path = "/:planetId" element = {<Home/>}></Route>   
-      <Route exact path = "/" element = {<Navigate to = "/Mercury"/>}></Route>   
-    </Routes>
-    <GlobalStyle/>   
-    </BrowserRouter>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route exact path="Solar-System/:planetId" element={<Home />}></Route>
+          <Route
+            exact
+            path="/Solar-System"
+            element={<Navigate to="/Solar-System/Mercury" />}
+          ></Route>
+        </Routes>
+        <GlobalStyle />
+      </BrowserRouter>
     </>
   );
 }

@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-
 export const GlobalStyle = createGlobalStyle`
 
 :root{
@@ -66,5 +65,4 @@ body {
     box-sizing: border-box;
 }
 
-`
-
+`;

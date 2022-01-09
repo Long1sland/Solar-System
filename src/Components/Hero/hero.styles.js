@@ -1,42 +1,59 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-
-padding-top: 130px;
-padding-bottom: 50px;
-padding-left: 25px;
-padding-right: 25px;
-
-
-`
-
+  padding-top: 55px;
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+`;
 
 export const Content = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-max-width: 1024px;
-margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1024px;
+  margin: 0 auto;
 
-
-`
-
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+`;
 
 export const PlanetImage = styled.img`
 height: 290px;
 
 
 }
-`
+`;
 
 export const PlanetData = styled.div`
+  display: flex;
+  flex-direction: column;
 
-display: flex;
-flex-direction: column;
-width: 400px;
+  @media screen and (max-width: 1024px) {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-h1{
-    margin-top: 0;
-}
-`
+  @media screen and (max-width: 860px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
+  #Words {
+    width: 350px;
+
+    @media screen and (max-width: 860px) {
+      width: 100%;
+    }
+  }
+
+  #Buttons {
+    @media screen and (max-width: 860px) {
+      display: none;
+    }
+  }
+`;
