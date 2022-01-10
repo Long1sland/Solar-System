@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  background-color: transparent;
+  background-color: ${({ color }) => color};
   padding: 0 28px;
   border-bottom: 1px solid var(--darkGrey);
+  position: fixed;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(8px);
 `;
 
 export const Content = styled.div`
