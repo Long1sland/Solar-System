@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Solar-System/static/js/main.5797a0bf.js",
+    "main.js": "/Solar-System/static/js/main.b36eb0b5.js",
     "index.html": "/Solar-System/index.html",
-    "main.5797a0bf.js.map": "/Solar-System/static/js/main.5797a0bf.js.map"
+    "main.b36eb0b5.js.map": "/Solar-System/static/js/main.b36eb0b5.js.map"
   },
   "entrypoints": [
-    "static/js/main.5797a0bf.js"
+    "static/js/main.b36eb0b5.js"
   ]
 }
