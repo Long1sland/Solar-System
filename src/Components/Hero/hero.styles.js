@@ -1,17 +1,14 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  padding-top: 200px;
-  padding-bottom: 50px;
-  padding-left: 25px;
-  padding-right: 25px;
+  margin-bottom: 100px;
 `;
 
 export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1024px;
+  max-width: 1280px;
   margin: 0 auto;
 
   @media screen and (max-width: 1024px) {

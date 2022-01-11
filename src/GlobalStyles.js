@@ -52,6 +52,14 @@ body {
         color: var(--white)
     }
 
+    h4{
+        font-family: 'Spartan', sans-serif;
+        font-size: 11px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        color: var(--white)
+       
+    }
     p {
         font-family: 'Spartan', sans-serif;
         font-weight: 400;
