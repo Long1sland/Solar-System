@@ -105,3 +105,32 @@ export const Navlinks = styled.div`
     display: none;
   }
 `;
+
+export const Hamburger = styled.img`
+  transition: all 0.3s ease-in-out;
+  filter: ${({ color }) => color};
+
+  @media screen and (min-width: 860px) {
+    display: none;
+  }
+`;
+
+export const Menu = styled.div`
+  height: calc(100vh - 82px);
+
+  background: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  animation: slide 0.3s linear;
+
+  @keyframes slide {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(10px);
+    }
+  }
+`;

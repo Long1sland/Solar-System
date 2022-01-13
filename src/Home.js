@@ -4,6 +4,7 @@ import FooterData from "./Components/PlanetFooterData";
 import { Wrapper } from "./Home.styles";
 
 const Home = () => {
+  console.log("home has rendered");
   return (
     <Wrapper>
       <Hero></Hero>

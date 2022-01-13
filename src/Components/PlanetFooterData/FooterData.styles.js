@@ -6,6 +6,8 @@ export const Wrapper = styled.div`
 
   @media screen and (max-width: 860px) {
     flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
   }
 `;
 
@@ -28,14 +30,19 @@ export const InfoBox = styled.div`
   }
 
   @media screen and (max-width: 860px) {
-    max-width: 500px;
+    width: 100%;
+    margin-bottom: 20px;
 
     h2 {
-      font-size: inherit;
+      font-size: 40px;
+      float: right;
+      text-align: center;
     }
 
     h4 {
-      font-size: inherit;
+      float: left;
+      font-size: 11px;
+      text-align: center;
     }
   }
 
