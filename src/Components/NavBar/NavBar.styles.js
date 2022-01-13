@@ -122,7 +122,7 @@ export const Menu = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  animation: slide 0.3s linear;
+  animation: slide 1s cubic-bezier(0.59, -0.05, 0.12, 0.63);
 
   @keyframes slide {
     from {
