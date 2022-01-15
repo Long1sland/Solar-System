@@ -10,11 +10,10 @@ import {
 } from "./NavBar.styles";
 import { NavLink } from "react-router-dom";
 import Any from "./icon-hamburger.svg";
-import { useParams } from "react-router";
 
 const NavBar = () => {
-  const handleChange = () => {
-    setMenuOpen(false);
+  const handleMenuOpen = () => {
+    setMenuOpen(!menuOpen);
   };
 
   const [colorChange, setColorChange] = useState(false);
@@ -96,9 +95,7 @@ const NavBar = () => {
           <Hamburger
             src={Any}
             alt="Hamburger"
-            onClick={() => {
-              setMenuOpen(!menuOpen);
-            }}
+            onClick={handleMenuOpen}
             color={
               menuOpen
                 ? "invert(55%) sepia(8%) saturate(418%) hue-rotate(201deg) brightness(93%) contrast(90%);"
@@ -106,7 +103,7 @@ const NavBar = () => {
             }
           />
         </Content>
-        {menuOpen && <Overlay menuOpen={handleChange} />}
+        {menuOpen && <Overlay menuOpen={handleMenuOpen} />}
       </Wrapper>
       <GlobalStyle scrollable={menuOpen ? "hidden" : null} />
     </>

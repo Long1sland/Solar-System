@@ -108,6 +108,8 @@ export const Navlinks = styled.div`
 `;
 
 export const Hamburger = styled.img`
+  padding: 20px 0;
+  padding-left: 20px;
   transition: all 0.3s ease-in-out;
   filter: ${({ color }) => color};
 
