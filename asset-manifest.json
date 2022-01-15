@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.js": "/Solar-System/static/js/main.c175bfc8.js",
+    "main.js": "/Solar-System/static/js/main.ede27532.js",
     "index.html": "/Solar-System/index.html",
     "static/media/icon-hamburger.svg": "/Solar-System/static/media/icon-hamburger.05a40a49142005f6faf230286ab38214.svg",
-    "main.c175bfc8.js.map": "/Solar-System/static/js/main.c175bfc8.js.map"
+    "static/media/icon-chevron.svg": "/Solar-System/static/media/icon-chevron.8915cee97f993fb990aac66c578ad575.svg",
+    "main.ede27532.js.map": "/Solar-System/static/js/main.ede27532.js.map"
   },
   "entrypoints": [
-    "static/js/main.c175bfc8.js"
+    "static/js/main.ede27532.js"
   ]
 }
