@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const Wrapper = styled.div`
   background-color: ${({ color }) => color};
@@ -115,22 +116,8 @@ export const Hamburger = styled.img`
   }
 `;
 
-export const Menu = styled.div`
-  height: calc(100vh - 82px);
-
-  background: white;
-  position: absolute;
-  left: 0;
-  right: 0;
-  animation: slide 1s cubic-bezier(0.59, -0.05, 0.12, 0.63);
-
-  @keyframes slide {
-    from {
-      transform: translateX(-100%);
-    }
-
-    to {
-      transform: translateX(10px);
-    }
-  }
+export const GlobalStyle = createGlobalStyle`
+body{
+  overflow: ${({ scrollable }) => scrollable}
+}
 `;

@@ -10,7 +10,6 @@ const Hero = () => {
   const { planetId } = useParams();
   const { state } = usePlanetFetch(planetId);
 
-  console.log(state);
   return (
     <Wrapper>
       <Content>

@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
-import { Wrapper, Content, Navlinks, Hamburger, Menu } from "./NavBar.styles";
+import Overlay from "./Overlay";
+import {
+  Wrapper,
+  Content,
+  Navlinks,
+  Hamburger,
+  GlobalStyle,
+} from "./NavBar.styles";
 import { NavLink } from "react-router-dom";
 import Any from "./icon-hamburger.svg";
+import { useParams } from "react-router";
 
 const NavBar = () => {
-  const [colorChange, setColorchange] = useState(false);
+  const handleChange = () => {
+    setMenuOpen(false);
+  };
+
+  const [colorChange, setColorChange] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 10) {
-      setColorchange(true);
+      setColorChange(true);
     } else {
-      setColorchange(false);
+      setColorChange(false);
     }
   };
   window.addEventListener("scroll", changeNavbarColor);
@@ -94,8 +106,9 @@ const NavBar = () => {
             }
           />
         </Content>
-        {menuOpen && <Menu />}
+        {menuOpen && <Overlay menuOpen={handleChange} />}
       </Wrapper>
+      <GlobalStyle scrollable={menuOpen ? "hidden" : null} />
     </>
   );
 };
