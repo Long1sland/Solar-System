@@ -1,11 +1,7 @@
 import react from "react";
-import { useParams } from "react-router";
-import usePlanetFetch from "../../Hook/usePlanetFetch";
-import { Wrapper, InfoBox } from "./FooterData.styles";
-const FooterData = () => {
-  const { planetId } = useParams();
-  const { state } = usePlanetFetch(planetId);
 
+import { Wrapper, InfoBox } from "./FooterData.styles";
+const FooterData = ({ data: state }) => {
   return (
     <Wrapper>
       <InfoBox>
