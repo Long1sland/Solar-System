@@ -17,11 +17,15 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route exact path="Solar-System/:planetId" element={<Home />}></Route>
+          <Route
+            exact
+            path="Solar-System/:planetId/:section"
+            element={<Home />}
+          ></Route>
           <Route
             exact
             path="/Solar-System"
-            element={<Navigate to="/Solar-System/Mercury" />}
+            element={<Navigate to="/Solar-System/Mercury/overview" />}
           ></Route>
         </Routes>
         <GlobalStyle />

@@ -3,32 +3,33 @@ import react from "react";
 import { PlanetData, PlanetImage, Content, Wrapper } from "./hero.styles";
 import usePlanetFetch from "../../Hook/usePlanetFetch";
 import FooterData from "../PlanetFooterData";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "../Button";
 
 const Hero = () => {
-  const { state } = usePlanetFetch();
+  const { state, planetImage, planetId, section, planetText } =
+    usePlanetFetch();
 
   return (
     <>
       <Wrapper>
         <Content>
-          <PlanetImage src={state.images ? state.images.planet : null} />
+          <PlanetImage src={"." + planetImage} />
           <PlanetData>
             <div id="Words">
               <h1>{state.name}</h1>
-              <p>{state.overview ? state.overview.content : null}</p>
+              <p>{planetText}</p>
             </div>
             <div id="Buttons">
-              <NavLink to={`#`}>
+              <Link to={"./../overview"}>
                 <Button color={`${state.color}`} text="OVERVIEW" />
-              </NavLink>
-              <NavLink to={`#`}>
+              </Link>
+              <Link to={`./../internal`}>
                 <Button color={`${state.color}`} text="INTERNAL STRUCTURE" />
-              </NavLink>
-              <NavLink to={`#`}>
+              </Link>
+              <Link to={`./../geology`}>
                 <Button color={`${state.color}`} text="SURFACE GEOLOGY" />
-              </NavLink>
+              </Link>
             </div>
           </PlanetData>
         </Content>

@@ -21,7 +21,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: url("assets/background-stars.svg"), var(--backgroundColor);
+    background: url("../assets/background-stars.svg"), var(--backgroundColor);
     
 
     a{

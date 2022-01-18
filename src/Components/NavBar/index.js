@@ -36,56 +36,56 @@ const NavBar = () => {
           <Navlinks>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Mercury"
+              to="Solar-System/Mercury/overview"
               id="mercury"
             >
               MERCURY
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Venus"
+              to="Solar-System/Venus/overview"
               id="venus"
             >
               VENUS
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Earth"
+              to="Solar-System/Earth/overview"
               id="earth"
             >
               EARTH
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Mars"
+              to="Solar-System/Mars/overview"
               id="mars"
             >
               MARS
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Jupiter"
+              to="Solar-System/Jupiter/overview"
               id="jupiter"
             >
               JUPITER
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Saturn"
+              to="Solar-System/Saturn/overview"
               id="saturn"
             >
               SATURN
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Uranus"
+              to="Solar-System/Uranus/overview"
               id="uranus"
             >
               URANUS
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Neptune"
+              to="Solar-System/Neptune/overview"
               id="neptune"
               className="noMargin"
             >
