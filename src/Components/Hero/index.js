@@ -1,5 +1,3 @@
-import react from "react";
-
 import { PlanetData, PlanetImage, Content, Wrapper } from "./hero.styles";
 import usePlanetFetch from "../../Hook/usePlanetFetch";
 import FooterData from "../PlanetFooterData";
@@ -7,8 +5,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button";
 
 const Hero = () => {
-  const { state, planetImage, planetId, section, planetText } =
-    usePlanetFetch();
+  const { state, planetImage, planetText } = usePlanetFetch();
 
   return (
     <>

@@ -13,7 +13,7 @@ const Overlay = ({ menuOpen }) => {
               <div id="Mercury" className="circle"></div>
               <h4>Mercury</h4>
             </MenuContent>
-            <img src={Pointer} alt="image" />
+            <img src={Pointer} alt="arrow" />
           </MenuItem>
         </Link>
         <Link to="/Solar-System/Venus/overview">

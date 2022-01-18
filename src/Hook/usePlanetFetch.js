@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
 const initialState = [
@@ -46,14 +46,14 @@ const usePlanetFetch = () => {
 
     console.log(planetData);
     const filtered = planetData.filter((planet) => {
-      return planet.name == planetId;
+      return planet.name === planetId;
     });
 
     setState(...filtered);
     setPlanetImage(() => {
-      if (section == "overview") {
+      if (section === "overview") {
         return filtered[0].images.planet;
-      } else if (section == "internal") {
+      } else if (section === "internal") {
         return filtered[0].images.internal;
       } else {
         return filtered[0].images.geology;
@@ -61,9 +61,9 @@ const usePlanetFetch = () => {
     });
 
     setPlanetText(() => {
-      if (section == "overview") {
+      if (section === "overview") {
         return filtered[0].overview.content;
-      } else if (section == "internal") {
+      } else if (section === "internal") {
         return filtered[0].structure.content;
       } else {
         return filtered[0].geology.content;
