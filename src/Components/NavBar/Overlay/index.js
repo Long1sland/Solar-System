@@ -7,7 +7,7 @@ const Overlay = ({ menuOpen }) => {
   return (
     <Wrapper>
       <Content onClick={menuOpen}>
-        <Link to="/Solar-System/Mercury">
+        <Link to="/Solar-System/Mercury/overview">
           <MenuItem>
             <MenuContent>
               <div id="Mercury" className="circle"></div>
@@ -25,7 +25,7 @@ const Overlay = ({ menuOpen }) => {
             <img src={Pointer} alt="venus" />
           </MenuItem>
         </Link>
-        <Link to="/Solar-System/Earth">
+        <Link to="/Solar-System/Earth/overview">
           <MenuItem>
             <MenuContent>
               <div id="Earth" className="circle"></div>
@@ -34,7 +34,7 @@ const Overlay = ({ menuOpen }) => {
             <img src={Pointer} alt="Earth" />
           </MenuItem>
         </Link>
-        <Link to="/Solar-System/Mars">
+        <Link to="/Solar-System/Mars/overview">
           <MenuItem>
             <MenuContent>
               <div id="Mars" className="circle"></div>
@@ -43,7 +43,7 @@ const Overlay = ({ menuOpen }) => {
             <img src={Pointer} alt="Mars" />
           </MenuItem>
         </Link>
-        <Link to="/Solar-System/Jupiter">
+        <Link to="/Solar-System/Jupiter/overview">
           <MenuItem>
             <MenuContent>
               <div id="Jupiter" className="circle"></div>
@@ -52,7 +52,7 @@ const Overlay = ({ menuOpen }) => {
             <img src={Pointer} alt="Jupiter" />
           </MenuItem>
         </Link>
-        <Link to="/Solar-System/Satrun">
+        <Link to="/Solar-System/Satrun/overview">
           <MenuItem>
             <MenuContent>
               <div id="Saturn" className="circle"></div>
@@ -61,7 +61,7 @@ const Overlay = ({ menuOpen }) => {
             <img src={Pointer} alt="" />
           </MenuItem>
         </Link>
-        <Link to="/Solar-System/Uranus">
+        <Link to="/Solar-System/Uranus/overview">
           <MenuItem>
             <MenuContent>
               <div id="Uranus" className="circle"></div>
@@ -70,7 +70,7 @@ const Overlay = ({ menuOpen }) => {
             <img src={Pointer} alt="Uranus" />
           </MenuItem>
         </Link>
-        <Link to="/Solar-System/Neptune">
+        <Link to="/Solar-System/Neptune/overview">
           <MenuItem>
             <MenuContent>
               <div id="Neptune" className="circle"></div>

@@ -1,4 +1,10 @@
-import { PlanetData, PlanetImage, Content, Wrapper } from "./hero.styles";
+import {
+  PlanetData,
+  PlanetImage,
+  Content,
+  Wrapper,
+  PlanetContainer,
+} from "./hero.styles";
 import usePlanetFetch from "../../Hook/usePlanetFetch";
 import FooterData from "../PlanetFooterData";
 import { Link } from "react-router-dom";
@@ -6,12 +12,17 @@ import Button from "../Button";
 
 const Hero = () => {
   const { state, planetImage, planetText } = usePlanetFetch();
-
+  console.log(planetImage);
   return (
     <>
       <Wrapper>
         <Content>
-          <PlanetImage src={"." + planetImage} />
+          <PlanetContainer>
+            <img id="main" src={"." + planetImage[0]}></img>
+            {planetImage[1] && (
+              <img id="float" src={"." + planetImage[1]}></img>
+            )}
+          </PlanetContainer>
           <PlanetData>
             <div id="Words">
               <h1>{state.name}</h1>
@@ -30,8 +41,8 @@ const Hero = () => {
             </div>
           </PlanetData>
         </Content>
+        <FooterData data={state}></FooterData>
       </Wrapper>
-      <FooterData data={state}></FooterData>
     </>
   );
 };

@@ -52,11 +52,11 @@ const usePlanetFetch = () => {
     setState(...filtered);
     setPlanetImage(() => {
       if (section === "overview") {
-        return filtered[0].images.planet;
+        return [filtered[0].images.planet];
       } else if (section === "internal") {
-        return filtered[0].images.internal;
+        return [filtered[0].images.internal];
       } else {
-        return filtered[0].images.geology;
+        return [filtered[0].images.planet, filtered[0].images.geology];
       }
     });
 

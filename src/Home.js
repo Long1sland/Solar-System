@@ -1,13 +1,16 @@
 import react from "react";
+import { Outlet } from "react-router";
 import Hero from "./Components/Hero";
-import { Wrapper } from "./Home.styles";
+import NavBar from "./Components/NavBar";
 
 const Home = () => {
   console.log("home has rendered");
   return (
-    <Wrapper>
+    <>
+      <NavBar></NavBar>
       <Hero></Hero>
-    </Wrapper>
+      <Outlet />
+    </>
   );
 };
 

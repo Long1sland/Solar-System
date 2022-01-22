@@ -1,20 +1,47 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  margin-bottom: 100px;
+  padding-top: 210px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: 1024px) {
+    padding-top: 100px;
+  }
 `;
 export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1280px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
   }
 `;
 
+export const PlanetContainer = styled.div`
+  position: relative;
+  height: 300px;
+  width: 300px;
+  #main {
+    height: 300px;
+    position: absolute;
+
+    z-index: 1;
+  }
+
+  #float {
+    height: 142px;
+    position: absolute;
+    top: 210px;
+    left: 92px;
+    z-index: 2;
+  }
+`;
 export const PlanetImage = styled.img`
 height: 290px;
 

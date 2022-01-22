@@ -9,15 +9,17 @@ import {
 } from "./NavBar.styles";
 import { NavLink } from "react-router-dom";
 import Any from "./icon-hamburger.svg";
+import MobileNav from "./MobileNav";
+import { useParams } from "react-router";
 
 const NavBar = () => {
+  const [colorChange, setColorChange] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { planetId, section } = useParams();
+
   const handleMenuOpen = () => {
     setMenuOpen(!menuOpen);
   };
-
-  const [colorChange, setColorChange] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-
   const changeNavbarColor = () => {
     if (window.scrollY >= 10) {
       setColorChange(true);
@@ -34,57 +36,57 @@ const NavBar = () => {
           <p>THE PLANETS</p>
           <Navlinks>
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Mercury/overview"
+              className={() => (planetId == "Mercury" ? "active" : null)}
+              to="../../Solar-System/Mercury/overview"
               id="mercury"
             >
               MERCURY
             </NavLink>
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Venus/overview"
+              className={() => (planetId == "Venus" ? "active" : null)}
+              to="../Solar-System/Venus/overview"
               id="venus"
             >
               VENUS
             </NavLink>
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Earth/overview"
+              className={() => (planetId == "Earth" ? "active" : null)}
+              to="../Solar-System/Earth/overview"
               id="earth"
             >
               EARTH
             </NavLink>
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Mars/overview"
+              className={() => (planetId == "Mars" ? "active" : null)}
+              to="../Solar-System/Mars/overview"
               id="mars"
             >
               MARS
             </NavLink>
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Jupiter/overview"
+              className={() => (planetId == "Jupiter" ? "active" : null)}
+              to="../Solar-System/Jupiter/overview"
               id="jupiter"
             >
               JUPITER
             </NavLink>
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Saturn/overview"
+              className={() => (planetId == "Saturn" ? "active" : null)}
+              to="../Solar-System/Saturn/overview"
               id="saturn"
             >
               SATURN
             </NavLink>
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Uranus/overview"
+              className={() => (planetId == "Uranus" ? "active" : null)}
+              to="../Solar-System/Uranus/overview"
               id="uranus"
             >
               URANUS
             </NavLink>
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : null)}
-              to="Solar-System/Neptune/overview"
+              className={() => (planetId == "Neptune" ? "active" : null)}
+              to="../Solar-System/Neptune/overview"
               id="neptune"
               className="noMargin"
             >
@@ -102,6 +104,11 @@ const NavBar = () => {
             }
           />
         </Content>
+        <MobileNav
+          color={colorChange ? "hsl(0,0%,0%, 0.7)" : "transparent"}
+          planetId={planetId}
+          section={section}
+        />
         {menuOpen && <Overlay menuOpen={handleMenuOpen} />}
       </Wrapper>
       <GlobalStyle scrollable={menuOpen ? "hidden" : null} />

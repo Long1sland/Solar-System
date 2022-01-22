@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   width: 100%;
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(8px);
+  z-index: 99;
 `;
 
 export const Content = styled.div`

@@ -3,11 +3,14 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
 
   @media screen and (max-width: 860px) {
     flex-direction: column;
     max-width: 500px;
-    margin: 0 auto;
   }
 `;
 
