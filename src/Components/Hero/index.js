@@ -9,10 +9,11 @@ import usePlanetFetch from "../../Hook/usePlanetFetch";
 import FooterData from "../PlanetFooterData";
 import { Link } from "react-router-dom";
 import Button from "../Button";
-
+import { useParams } from "react-router";
 const Hero = () => {
   const { state, planetImage, planetText } = usePlanetFetch();
   console.log(planetImage);
+  const { section } = useParams();
   return (
     <>
       <Wrapper>
@@ -30,13 +31,22 @@ const Hero = () => {
             </div>
             <div id="Buttons">
               <Link to={"./../overview"}>
-                <Button color={`${state.color}`} text="OVERVIEW" />
+                <Button
+                  color={section == "overview" ? `${state.color}` : null}
+                  text="OVERVIEW"
+                />
               </Link>
               <Link to={`./../internal`}>
-                <Button color={`${state.color}`} text="INTERNAL STRUCTURE" />
+                <Button
+                  color={section == "internal" ? `${state.color}` : null}
+                  text="INTERNAL STRUCTURE"
+                />
               </Link>
               <Link to={`./../geology`}>
-                <Button color={`${state.color}`} text="SURFACE GEOLOGY" />
+                <Button
+                  color={section == "geology" ? `${state.color}` : null}
+                  text="SURFACE GEOLOGY"
+                />
               </Link>
             </div>
           </PlanetData>

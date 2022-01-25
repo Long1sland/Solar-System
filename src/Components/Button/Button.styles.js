@@ -6,10 +6,10 @@ export const Wrapper = styled.div`
   margin-top: 12px;
   transition: all 0.3s ease-in-out;
   width: 400px;
+  background: ${({ color }) => color};
 
   :hover {
-    background: ${({ color }) => color};
-    border: solid 2px ${({ color }) => color};
+    background-color: var(--darkGrey);
   }
 `;
 

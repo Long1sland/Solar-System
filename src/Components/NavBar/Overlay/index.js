@@ -52,7 +52,7 @@ const Overlay = ({ menuOpen }) => {
             <img src={Pointer} alt="Jupiter" />
           </MenuItem>
         </Link>
-        <Link to="/Solar-System/Satrun/overview">
+        <Link to="/Solar-System/Saturn/overview">
           <MenuItem>
             <MenuContent>
               <div id="Saturn" className="circle"></div>

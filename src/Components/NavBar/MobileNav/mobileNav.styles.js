@@ -7,7 +7,8 @@ export const Wrapper = styled.div`
   left: 0;
   width: 100vw;
   padding: 0 40px;
-  border-bottom: 1px solid var(--darkGrey);
+  border-bottom: 2px solid var(--darkGrey);
+  border-top: 1px solid var(--darkGrey);
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(8px);
   @media screen and (min-width: 860px) {
@@ -26,12 +27,17 @@ export const Content = styled.div`
     color: var(--darkGrey);
   }
 
-  h4:hover {
-    color: white;
+  a,
+  h4 {
+    transition: all 0.3s linear;
   }
 
-  .active {
+  a.active,
+  a:hover {
     border-bottom: 3px solid ${({ color }) => color};
-    transition: all 0.3s ease-in-out;
+
+    h4 {
+      color: white;
+    }
   }
 `;

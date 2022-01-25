@@ -5,8 +5,8 @@ export const Wrapper = styled.div`
   padding-left: 30px;
   padding-right: 30px;
 
-  @media (min-width: 1024px) {
-    padding-top: 100px;
+  @media (max-width: 1024px) {
+    padding-top: 260px;
   }
 `;
 export const Content = styled.div`
